@@ -1,0 +1,36 @@
+h1 {
+    font-size: 50px;
+    border-bottom: 2.5px solid gray;
+    padding: 30px;
+    margin: 0;
+}
+
+.calendar-header {
+    display: flex;
+}
+.calendar-header button{
+  
+}
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    
+  /* border-top: 1px solid #333333;
+  border-right: 1px solid #333333; */
+}
+
+.date {
+    cursor: pointer;
+    padding: 5px;
+    /* border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333; */
+}
+/* .empty {
+  background-color: red;
+} */

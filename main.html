@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PLAY with ME</title>
+    <link rel="stylesheet" href="pwm.css">
+</head>
+
+<body>
+    <h1>PLAY with ME</h1>
+    <div class="calendar-header">
+        <button id="prevBtn">이전</button>
+        <h2 id="currentMonth"></h2>
+        <button id="nextBtn">다음</button>
+    </div>
+    <div class="calendar-days">
+        <div class="day">일</div>
+        <div class="day">월</div>
+        <div class="day">화</div>
+        <div class="day">수</div>
+        <div class="day">목</div>
+        <div class="day">금</div>
+        <div class="day">토</div>
+    </div>
+    <div class="calendar-dates" id="calendarDates"><a href="booking.html"></a></div>
+    <div id="YM"></div>
+    <div id="booking" hidden>
+        <h3 id="selectDate"></h3>
+        <div calss="text">
+            <input id="title">
+            <input id="memo">
+        </div>
+        <p>
+            <input type="button" id="AM" value="오전">
+            <input type="button" id="PM" value="오후">
+        </p>
+    </div>
+    <script src="pwm.js"></script>
+</body>
+
+</html>
