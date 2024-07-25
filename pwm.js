@@ -1,3 +1,4 @@
+//Caleandar
 const calendarDates = document.getElementById("calendarDates");
 const currentMonthElement = document.getElementById("currentMonth");
 const prevBtn = document.getElementById("prevBtn");
@@ -8,12 +9,13 @@ const today = new Date();
 let currentMonth = today.getMonth();
 let currentYear = today.getFullYear();
 
+
 function Calendar() {
 
     const firstDayOfMonth = new Date(currentYear, currentMonth, 1); // 해당 월의 첫번째 날짜
     const dayInMonth = new Date(currentYear, currentMonth + 1, 0).getDate(); // 해당 월의 날짜의 수
     const startDayOfWeek = firstDayOfMonth.getDay(); // 첫번째 날짜의 요일
-    console.log(firstDayOfMonth,startDayOfWeek)
+    console.log(firstDayOfMonth, startDayOfWeek)
 
     currentMonthElement.textContent = currentYear + '. ' + (currentMonth + 1) + '.';
     calendarDates.innerHTML = "";
@@ -31,12 +33,13 @@ function Calendar() {
         calendarDates.appendChild(dateElement);
 
         dateElement.addEventListener("click", function () { // 날짜 선택 시 예약버튼 보이기
-            selectDate.textContent = currentYear + '. ' + (currentMonth + 1) + '. ' + j + '. ';
+            selectDate.textContent = '선택된 날짜: ' + currentYear + '. ' + (currentMonth + 1) + '. ' + j + '. ';
             document.getElementById("booking").hidden = false;
         });
     }
 }
 Calendar();
+// 이전 달력 표시
 prevBtn.addEventListener("click", function () {
     currentMonth--;
     if (currentMonth < 0) {
@@ -45,6 +48,7 @@ prevBtn.addEventListener("click", function () {
     }
     Calendar();
 });
+// 다음 달력 표시
 nextBtn.addEventListener("click", function () {
     currentMonth++;
     if (currentMonth > 11) {

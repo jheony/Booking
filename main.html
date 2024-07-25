@@ -3,38 +3,51 @@
 
 <head>
     <title>PLAY with ME</title>
+    <a href="login.html">로그인</a>
     <link rel="stylesheet" href="pwm.css">
 </head>
 
 <body>
     <h1>PLAY with ME</h1>
-    <div class="calendar-header">
-        <button id="prevBtn">이전</button>
-        <h2 id="currentMonth"></h2>
-        <button id="nextBtn">다음</button>
-    </div>
-    <div class="calendar-days">
-        <div class="day">일</div>
-        <div class="day">월</div>
-        <div class="day">화</div>
-        <div class="day">수</div>
-        <div class="day">목</div>
-        <div class="day">금</div>
-        <div class="day">토</div>
-    </div>
-    <div class="calendar-dates" id="calendarDates"><a href="booking.html"></a></div>
-    <div id="YM"></div>
-    <div id="booking" hidden>
-        <h3 id="selectDate"></h3>
-        <div calss="text">
-            <input id="title">
-            <input id="memo">
+    <div class="calendar">
+
+        <div class="calendar-header">
+            <button id="prevBtn">이전</button>
+            <h2 id="currentMonth"></h2>
+            <button id="nextBtn">다음</button>
         </div>
-        <p>
-            <input type="button" id="AM" value="오전">
-            <input type="button" id="PM" value="오후">
-        </p>
+        <div class="calendar-days">
+            <div class="day">일</div>
+            <div class="day">월</div>
+            <div class="day">화</div>
+            <div class="day">수</div>
+            <div class="day">목</div>
+            <div class="day">금</div>
+            <div class="day">토</div>
+        </div>
+        <div class="calendar-dates" id="calendarDates"><a href="booking.html"></a></div>
+
+        <div id="booking" hidden>
+            <h3 id="selectDate">선택된 날짜:</h3>
+            <div class="text">
+                <input id="title" placeholder="제목">
+                <input id="memo" placeholder="메모">
+            </div>
+            <div class="time-selection">
+                <label for="time">시간:</label>
+                <select id="ampm">
+                    <option value="AM">오전</option>
+                    <option value="PM">오후</option>
+                </select>
+                <select id="startTime"></select>
+                <select id="eTime"></select>
+            </div>
+            <button id="saveBooking">저장</button>
+        </div>
+        <p id="bookingMessage"></p>
     </div>
+    </div>
+    <script src="booking.js"></script>
     <script src="pwm.js"></script>
 </body>
 
