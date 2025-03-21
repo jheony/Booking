@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar with Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>PLAY with ME</h1>
+    <div class="calendar">
+        <div class="calendar-header">
+            <button id="prevBtn">이전</button>
+            <h2 id="currentMonth"></h2>
+            <button id="nextBtn">다음</button>
+        </div>
+        <div class="calendar-days">
+            <div class="day">일</div>
+            <div class="day">월</div>
+            <div class="day">화</div>
+            <div class="day">수</div>
+            <div class="day">목</div>
+            <div class="day">금</div>
+            <div class="day">토</div>
+        </div>
+        <div class="calendar-dates" id="calendarDates"></div>
+
+        <div id="booking" hidden>
+            <h3 id="selectDate">선택된 날짜:</h3>
+            <div class="text">
+                <input id="title" placeholder="제목">
+                <input id="memo" placeholder="메모">
+            </div>
+            <div class="time-selection">
+                <label for="time">시간:</label>
+                <select id="startTime"></select>
+                <label for="time"> ~ </label>
+                <select id="eTime"></select>
+            </div>
+            <button id="saveBooking">저장</button>
+        </div>
+        <p id="bookingMessage"></p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

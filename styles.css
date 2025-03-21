@@ -1,0 +1,136 @@
+.calendar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+ h1 {
+    font-size: 50px;
+    border-bottom: 2.5px solid gray;
+    padding: 30px;
+    padding-top: 0px;
+
+    margin: 0;
+}
+/* 로그인 */
+a{   
+  text-decoration: none;
+  float: right;
+}
+
+/* yyyy. mm. */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.calendar-header button {
+  background-color: #ff98cc;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background-color: #FF69B4;
+}
+/* 월-금, 1-31 */
+.calendar-days, .calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.calendar-days .day, .calendar-dates .date {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.calendar-days .day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #FFB6C1;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.calendar-dates .date:hover {
+  background-color: #e9ecef;
+}
+.empty{
+  visibility: hidden;
+}
+
+#booking {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#booking h3 {
+  margin-bottom: 10px;
+}
+
+.text input {
+  width: calc(90% );
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.text input:first-child {
+  margin-right: 10px;
+}
+
+.time-selection {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.time-selection label {
+  margin-right: 10px;
+}
+
+.time-selection select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+button#saveBooking {
+  background-color: #ff98cc;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#saveBooking:hover {
+  background-color: #ff7ebe;
+}
+
+p#bookingMessage {
+  margin-top: 10px;
+  color: #dc3545;
+}
